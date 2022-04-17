@@ -1,14 +1,17 @@
 <template>
   <TopNavBar/>
+  <MainWindow/>
 </template>
 
 <script>
 import TopNavBar from './components/TopNavBar.vue'
+import MainWindow from './components/MainWindow.vue'
 
 export default {
   name: 'App',
   components: {
-    TopNavBar
+    TopNavBar,
+    MainWindow
   }
 }
 </script>
@@ -18,7 +21,8 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  background-color: rgb(230, 230, 230)
+  width: 1240px;
+  height: 100%;
 }
+
 </style>
