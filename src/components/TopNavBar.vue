@@ -25,6 +25,7 @@ export default {
 
 <style scoped>
   .header {
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
@@ -53,6 +54,7 @@ export default {
     height: 16px;
     width: 104px;
     padding: 15px 0;
+
   }
   .header__searchbar-container {
     padding: 10px 15px 0px 15px;
@@ -74,10 +76,10 @@ export default {
     width: 109px;
   }
   .header__square_btn_container {
-    padding: 8px;
+    padding: 13px;
   }
   .header__square_btn_image {
-    height: 30px;
-    width: 30px;
+    height: 20px;
+    width: 20px;
   }
 </style>
