@@ -4,8 +4,8 @@
 </template>
 
 <script>
-import TopNavBar from './components/TopNavBar.vue'
-import MainWindow from './components/MainWindow.vue'
+import TopNavBar from './components/core/TopNavBar.vue'
+import MainWindow from './components/core/MainWindow.vue'
 
 export default {
   name: 'App',

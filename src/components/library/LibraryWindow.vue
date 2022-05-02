@@ -1,40 +1,34 @@
 <template>
-  <div class="app-container">
-    <div class="main-window-container">
-      <div class="track-list">
-        <div class="track-list__block" v-for="item in Tracks" :key="item.id">
-          <div class="track-list__track-window">
-            <img :src="item.thumbnail">
-            <MusicWindow :author="item.author" :name="item.name" :id="item.id"/>
-          </div>
+    <div class="library-window-container">
+        <LibraryNavBar @change-state="changeState"/>
+        <div class="track-list">
+            <div class="track-list__block" v-for="item in Tracks" :key="item.id">
+                <div class="track-list__track-window">
+                    <img :src="item.thumbnail">
+                    <MusicWindow :author="item.author" :name="item.name" :id="item.id"/>
+                </div>
+            </div>
         </div>
-      </div>
-      <hr class="bottom-line">
-      <div class="bottom-text">
-        <a class="bottom-ref" href="https://vk.com/hasagi_les_report">Legal</a> - 
-        <a class="bottom-ref" href="https://vk.com/hasagi_les_report">Privacy</a> - 
-        <a class="bottom-ref" href="https://vk.com/hasagi_les_report">Cookie Policy</a> - 
-        <a class="bottom-ref" href="https://vk.com/hasagi_les_report">Consent Manager</a> - 
-        <a class="bottom-ref" href="https://vk.com/hasagi_les_report">Imprint</a> - 
-        <a class="bottom-ref" href="https://vk.com/hasagi_les_report">Creator Resources</a> - 
-        <a class="bottom-ref" href="https://vk.com/hasagi_les_report">Blog</a> - 
-        <a class="bottom-ref" href="https://vk.com/hasagi_les_report">Charts</a> - 
-      </div>
+        <BottomRef/>
     </div>
-  </div>
 </template>
 
-<script>
 
-import MusicWindow from './MusicWindow.vue'
-import uniqueId from '../../node_modules/lodash/uniqueId'
+
+<script>
+import LibraryNavBar from './LibraryNavBar.vue'
+import MusicWindow from '../general/MusicWindow.vue'
+import BottomRef from '../general/BottomRef.vue'
+import uniqueId from '../../../node_modules/lodash/uniqueId'
 
 export default {
-  name: 'MainWindow',
-  components: {
-    MusicWindow
-  },
-  data() {
+    name: 'LibraryWindow',
+    components: {
+        LibraryNavBar,
+        MusicWindow,
+        BottomRef
+    },
+    data() {
     return {
       Tracks: [ {id: uniqueId(""), thumbnail: "https://picsum.photos/seed/" + uniqueId("picsum") + "/180", author: "Gadzooks",      name: "Crazy And Mic"},
                 {id: uniqueId(""), thumbnail: "https://picsum.photos/seed/" + uniqueId("picsum") + "/180", author: "Detinue",       name: "Street And Mic"},
@@ -46,22 +40,20 @@ export default {
                 {id: uniqueId(""), thumbnail: "https://picsum.photos/seed/" + uniqueId("picsum") + "/180", author: "Isodose",       name: "I Love She Made Her Choice"},
                 {id: uniqueId(""), thumbnail: "https://picsum.photos/seed/" + uniqueId("picsum") + "/180", author: "Spelunker",     name: "Triumph For Another Night"},
                 {id: uniqueId(""), thumbnail: "https://picsum.photos/seed/" + uniqueId("picsum") + "/180", author: "Spelunker",     name: "Triumph For Another Night"},
-      ]
+      ],
+      state: 'overview',
+    }
+  },
+  methods: {
+    changeState(name) {
+      this.state = name;
     }
   }
 }
 </script>
 
 <style scoped>
-
-  .app-container {
-    width: 1240px;
-    height: 1024px;
-    margin-left: 322px;
-    position: inherit;
-    background-color: #ffffff;
-  }
-  .main-window-container {
+    .library-window-container {
     position: absolute;
     width: 1200px;
     margin-top: 69px;
@@ -79,17 +71,5 @@ export default {
   .track-list__track-window {
     width: 180px;
     height: 260px;
-  }
-  .bottom-line {
-    border: solid 1px #f3f3f3;
-    width: 1180px;
-  }
-  .bottom-text {
-    font-size: 12px;
-    color: #d5d5d5;
-  }
-  .bottom-ref {
-    color: #d5d5d5;
-    text-decoration: none;
   }
 </style>

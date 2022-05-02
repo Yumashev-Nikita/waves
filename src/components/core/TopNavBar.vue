@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <div class="header__container">
-      <img class="header__img" src="../assets/header/logo_1.svg">
+      <img class="header__img" src="../../assets/header/logo_1.svg">
       <a class="header__text_btn">Home</a>
       <a class="header__text_btn">Stream</a>
       <a class="header__text_btn">Library</a>
@@ -10,9 +10,9 @@
       </div>
       <a class="header__text_btn header__upload_btn">Upload</a>
       <a class="header__account_btn header__text_btn">M8ZA</a>
-      <div class="header__square_btn_container"><img class="header__square_btn_image" src="../assets/header/rating.svg"></div>
-      <div class="header__square_btn_container"><img class="header__square_btn_image" src="../assets/header/notification.svg"></div>
-      <div class="header__square_btn_container"><img class="header__square_btn_image" src="../assets/header/menu_point.svg"></div>
+      <div class="header__square_btn_container"><img class="header__square_btn_image" src="../../assets/header/rating.svg"></div>
+      <div class="header__square_btn_container"><img class="header__square_btn_image" src="../../assets/header/notification.svg"></div>
+      <div class="header__square_btn_container"><img class="header__square_btn_image" src="../../assets/header/menu_point.svg"></div>
     </div>
   </div>
 </template>

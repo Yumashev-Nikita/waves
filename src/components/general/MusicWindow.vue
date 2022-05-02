@@ -1,7 +1,7 @@
 <template>
   <div class="track-window__container">
       <div class="track-window__track-name">
-        <img class="heart-inline" src="../assets/heart.svg">
+        <img class="heart-inline" src="../../assets/heart.svg">
         {{ name }}
       </div>
       <div class="track-window__track-author">
