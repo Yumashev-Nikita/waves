@@ -1,5 +1,5 @@
 <template>
-  <div class="library-navbar__container">: 
+  <div class="library-navbar__container">
     <div class="library-navbar__row-element on-hover-bbt" :style="[state === 'overview'  ? 'border-bottom: 2px solid #0094d9; color: #0094d9' : '']" @click="changeState('overview')">   Overview   </div>
     <div class="library-navbar__row-element on-hover-bbt" :style="[state === 'likes'     ? 'border-bottom: 2px solid #0094d9; color: #0094d9' : '']" @click="changeState('likes')">      Likes      </div>
     <div class="library-navbar__row-element on-hover-bbt" :style="[state === 'playlists' ? 'border-bottom: 2px solid #0094d9; color: #0094d9' : '']" @click="changeState('playlists')">  Playlists  </div>

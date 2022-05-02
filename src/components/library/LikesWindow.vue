@@ -5,7 +5,7 @@
   <div class="likes-window__track-list">
     <div class="likes-window__track-list_block" v-for="track in Likes" :key="track.id">
       <div class="likes-window__track-list_track-window">
-        <img :src="track.thumbnail">
+        <img style="cursor: pointer" :src="track.thumbnail">
         <MusicWindow :author="track.author" :name="track.name" :id="track.id"/>
       </div>
     </div>

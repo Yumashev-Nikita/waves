@@ -41,10 +41,12 @@ export default {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    cursor: pointer;
   }
   .track-window__track-author {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
     color: #999999;
+    cursor: pointer;
   }
 </style>
