@@ -1,5 +1,5 @@
 <template>
-  <div class="app-container">
+  <div class="main-window-container">
     <LibraryWindow/>
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style scoped>
-  .app-container {
+  .main-window-container {
     width: 1240px;
     height: 1024px;
     margin-left: 322px;

@@ -2,9 +2,9 @@
   <div class="header">
     <div class="header__container">
       <img class="header__img" src="../../assets/header/logo_1.svg">
-      <a class="header__text_btn">Home</a>
-      <a class="header__text_btn">Stream</a>
-      <a class="header__text_btn">Library</a>
+      <a style="border-left: 1px solid #111" class="header__text_btn">Home</a>
+      <a style="border-left: 1px solid #111" class="header__text_btn">Stream</a>
+      <a style="border-left: 1px solid #111; border-right: 1px solid #111" class="header__text_btn">Library</a>
       <div class="header__searchbar-container">
         <textarea class="header__searchbar"></textarea>
       </div>
@@ -44,6 +44,7 @@ export default {
     height: 36px;
     width: 69px;
     padding: 5px 0;
+    cursor: pointer;
     background-color: #85F4FF;
   }
   .header__text_btn {
@@ -55,6 +56,10 @@ export default {
     width: 104px;
     padding: 15px 0;
 
+  }
+  .header__text_btn:hover {
+    cursor: pointer;
+    color: #dfdfdf;
   }
   .header__searchbar-container {
     padding: 10px 15px 0px 15px;
@@ -70,12 +75,15 @@ export default {
     color: #9c9c9c;
   }
   .header__upload_btn {
+    cursor: pointer;
     width: 64px;
   }
   .header__account_btn {
+    cursor: pointer;
     width: 109px;
   }
   .header__square_btn_container {
+    cursor: pointer;
     padding: 13px;
   }
   .header__square_btn_image {

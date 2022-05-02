@@ -22,6 +22,7 @@ export default {
   .bottom-line {
     border: solid 1px #f3f3f3;
     width: 1180px;
+    margin-right: 20px;
   }
   .bottom-text {
     font-size: 12px;
@@ -30,5 +31,9 @@ export default {
   .bottom-ref {
     color: #d5d5d5;
     text-decoration: none;
+  }
+  .bottom-ref:hover {
+    color: #959595;
+    transition: color 0.2s;
   }
 </style>
