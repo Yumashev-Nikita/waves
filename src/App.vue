@@ -4,17 +4,18 @@
 </template>
 
 <script>
-import TopNavBar from './components/core/TopNavBar.vue'
-import MainWindow from './components/core/MainWindow.vue'
+  import TopNavBar from './components/core/TopNavBar.vue'
+  import MainWindow from './components/core/MainWindow.vue'
 
-export default {
-  name: 'App',
-  components: {
-    TopNavBar,
-    MainWindow
+  export default {
+    name: 'App',
+    components: {
+      TopNavBar,
+      MainWindow
+    }
   }
-}
 </script>
+
 
 <style>
 #app {
@@ -27,3 +28,5 @@ body {
   background-color: #EFFFFD;
 }
 </style>
+
+

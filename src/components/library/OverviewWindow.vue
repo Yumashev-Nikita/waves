@@ -2,7 +2,7 @@
   <div class="overview-window__barrier">
     <div class="overview-window__barrier_text">Likes</div>
   </div>
-  <LikesWindow :overview="true"/>
+  <LikesWindow :overviewed='true'/>
 </template>
 
 <script>

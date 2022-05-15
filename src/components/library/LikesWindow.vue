@@ -18,7 +18,7 @@ import MusicWindow from '../general/MusicWindow.vue'
 export default {
   name: "LikesWindow",
   props: {
-    overviewed: {type: Boolean, default: true} 
+    overviewed: {type: Boolean, default: false} 
   },
   components: {
     MusicWindow,

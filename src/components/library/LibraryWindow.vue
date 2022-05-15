@@ -1,35 +1,20 @@
 <template>
   <div class="library-window-container">
-    <LibraryNavBar @change-state="changeState" :state="state"/>
-    <LikesWindow v-if="state === 'likes'" :overviewed="false"/>
-    <OverviewWindow v-if="state === 'overview'"/>
+    <LibraryNavBar/>
+    <router-view></router-view>
     <BottomRef/>
   </div>
 </template>
 
 <script>
 import LibraryNavBar from './LibraryNavBar.vue'
-import LikesWindow from './LikesWindow'
-import OverviewWindow from './OverviewWindow'
 import BottomRef from '../general/BottomRef.vue'
 
 export default {
   name: 'LibraryWindow',
   components: {
     LibraryNavBar,
-    LikesWindow,
-    OverviewWindow,
     BottomRef
-  },
-  data() {
-    return {
-      state: 'overview',
-    }
-  },
-  methods: {
-    changeState(state) {
-      this.state = state;
-    }
   }
 }
 </script>
